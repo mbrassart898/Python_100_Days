@@ -9,13 +9,19 @@ score_b = 0
 for char in combined_names:
   if char == "t" or char == "r" or char == "u" or char == "e":
     score_a +=1
-for char in combined_names:
-  if char == "l" or char == "o" or char == "v" or char == "e":
-    score_b +=1
+# Altenative way using .count
+#for char in combined_names:
+#  if char == "l" or char == "o" or char == "v" or char == "e":
+#    score_b +=1
+l = combined_names.count("l")
+o = combined_names.count("o")
+v = combined_names.count("v")
+e = combined_names.count("e")
+score_b = l + o + v + e
 
-final_score = str(score_a) + str(score_b)
+love_score = int(str(score_a) + str(score_b))
   
-love_score = int(final_score)
+# love_score = int(final_score)  combined the int() above
 
 # For Scores less than 10 or greater than 90, the message should be
 if love_score < 10 or love_score >=90:
