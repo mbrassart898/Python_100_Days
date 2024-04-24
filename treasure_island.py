@@ -1,4 +1,4 @@
-print("Welcome to Treasure Island.")
+print("\nWelcome to Treasure Island.\n")
 print("Your mission is to find the treasure.") 
 # below picture comes from http://ascii.co.uk/art 
 # print(r''' text ''')  the r is for raw string to ingnore character that could be interpreted as escape
@@ -27,20 +27,27 @@ ____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
 ''')
 
 while True:
-  question_1 = input("Turn Right or Left? ").lower()
-  if question_1 == "right":
-     print("Fall into a hole. Game Over.")
-  else:
-     question_2 = input("Swim or Wait? ").lower()
-     if question_2 == "swim":
-        print("You were eaten by a shark. Game Over!")
-     else:
-        question_3 = input("Which door? Red, Blue or Yellow: ").lower()
+  question_1 = input('You\'re at a crossroad, where do you want to go? Type "left" or "right".').lower()
+  if question_1 == "left":
+     # continue the game
+     question_2 = input('You\'ve come to a lake. There is an island in the middle of the lake. Type "wait" to wait for the boat. Type "swim" to swim accross.').lower()
+     if question_2 == "wait":
+        #game continue
+        question_3 = input("You arrive at the island unharmed. There is a house with 3 doors. One red, one yellow, and one blue. Which door do you choose? red, yellow, or blue: ").lower()
         if question_3 == "yellow":
-          print("You Win!")
+          print("You found the treasure! You Win!")
+        elif question_3 == "red":
+          print("It's a room full of fire. Game is over!")
+        elif question_3 == "blue":
+          print("you enter a room of beasts. Game is over!")
         else:
-          print("Game Over")
-
+          Print()
+     else:   
+        print("You were eaten by a shark. Game Over!")
+  else:
+     print("Fall into a hole. Game Over.")
+     
+ 
   end_game = input("Do you want to play again? Y or N: ").lower()
   if end_game != "y":
      print("Thank you for playing!")
