@@ -41,7 +41,7 @@ while True:
         elif question_3 == "blue":
           print("you enter a room of beasts. Game is over!")
         else:
-          Print()
+          print()
      else:   
         print("You were eaten by a shark. Game Over!")
   else:
